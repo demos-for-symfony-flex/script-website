@@ -11,6 +11,7 @@ else
 fi
 composer config bin-dir bin
 # cp $origin/.env.dist . # Needs apparently to be done before install.
+composer remove --dev symfony/profiler-pack
 composer install
 # install --directory config # Is it really needed?
 # composer require symfony/yaml # in symfony/website-skeleton
