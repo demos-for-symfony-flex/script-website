@@ -13,6 +13,7 @@ composer config bin-dir bin
 # cp $origin/.env.dist . # Needs apparently to be done before install.
 composer install
 composer remove --dev symfony/profiler-pack
+#^ Dependency "symfony/twig-bundle" is also a root requirement, but is not explicitly whitelisted. Ignoring.
 # install --directory config # Is it really needed?
 # composer require symfony/yaml # in symfony/website-skeleton
 # composer require symfony/console # in symfony/website-skeleton
