@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # [[ ]] requires bash
 set -ev # https://docs.travis-ci.com/user/customizing-the-build/
 
@@ -11,8 +11,8 @@ else
 fi
 composer config bin-dir bin
 # cp $origin/.env.dist . # Needs apparently to be done before install.
-composer remove --dev symfony/profiler-pack
 composer install
+composer remove --dev symfony/profiler-pack
 # install --directory config # Is it really needed?
 # composer require symfony/yaml # in symfony/website-skeleton
 # composer require symfony/console # in symfony/website-skeleton
