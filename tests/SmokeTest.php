@@ -12,7 +12,7 @@ class SmokeTest extends WebTestCase
         $crawler = $client->request('GET', '/');
 
         $this->assertSame(200, $client->getResponse()->getStatusCode());
-        $this->assertSame(1, $crawler->filter('h1:contains("Hello World")')->count());
+        $this->assertSame(1, $crawler->filter('h1:contains("Hello")')->count());
     }
 
     /**
@@ -28,6 +28,6 @@ class SmokeTest extends WebTestCase
 
     public function urlProvider()
     {
-        yield ['/login'];
+        yield ['/'];
     }
 }
