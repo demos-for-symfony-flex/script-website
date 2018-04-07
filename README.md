@@ -1,3 +1,3 @@
 # script-website
 
-* Doubled in [symfony-website-skeleton-demo/website-skeleton-only](https://github.com/symfony-website-skeleton-demo/website-skeleton-only)
+* Script duplicate of composer [symfony-website-skeleton-demo/website-skeleton-only](https://github.com/symfony-website-skeleton-demo/website-skeleton-only)
