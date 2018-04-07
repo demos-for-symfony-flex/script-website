@@ -14,7 +14,7 @@ php:
 - nightly
 - 7.2
 - 7.1
-- 7.0
+- 7.0 # Remaining deprecation notices
 
 env:
   global:
@@ -49,6 +49,8 @@ install:
 - composer global require sensiolabs/security-checker
 
 script:
+- export SYMFONY_DEPRECATIONS_HELPER=$(php -r "if (version_compare(PHP_VERSION, '7.1.0', '<')) {echo 'weak_vendors';}")
+- printenv SYMFONY_DEPRECATIONS_HELPER
 - composer exec --verbose -- simple-phpunit
 
 after_script:
