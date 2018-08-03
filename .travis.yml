@@ -53,7 +53,7 @@ install:
 script:
 - export SYMFONY_DEPRECATIONS_HELPER=$(php -r "if (version_compare(PHP_VERSION, '7.1.0', '<')) {echo 'weak_vendors';}")
 - printenv SYMFONY_DEPRECATIONS_HELPER
-- (! composer exec --verbose -- simple-phpunit)
+- composer exec --verbose -- simple-phpunit
 
 after_script:
 - composer config bin-dir --absolute
