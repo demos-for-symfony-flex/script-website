@@ -56,6 +56,9 @@ script:
 - export SYMFONY_DEPRECATIONS_HELPER=$(php -r "if (version_compare(PHP_VERSION, '7.1.0', '<')) {echo 'weak_vendors';}")
 - printenv SYMFONY_DEPRECATIONS_HELPER
 - env SYMFONY_DEPRECATIONS_HELPER=weak_vendors composer exec --verbose -- simple-phpunit
+# Setting SYMFONY_DEPRECATIONS_HELPER to "weak_vendors" is deprecated in favor of "max[self]=0"
+# https://symfony.com/doc/current/components/phpunit_bridge.html
+- env SYMFONY_DEPRECATIONS_HELPER=max[total]=0 composer exec --verbose -- simple-phpunit
 
 after_script:
 - composer config bin-dir --absolute
